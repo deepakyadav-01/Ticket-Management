@@ -1,5 +1,3 @@
-// constants/messages.js
-
 export const AUTH_MESSAGES = {
   REGISTRATION_SUCCESS: "User registered successfully",
   LOGIN_SUCCESS: "Logged in successfully",
