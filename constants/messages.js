@@ -7,7 +7,8 @@ export const AUTH_MESSAGES = {
   EMAIL_ALREADY_EXISTS: "Email already exists. Please use another email.",
   INVALID_EMAIL: "Please provide a valid email address",
   PASSWORD_TOO_SHORT: "Password must be at least 8 characters long",
-  NAME_REQUIRED: "Please provide your name",
+  FIRSTNAME_REQUIRED: "Please provide your firstname",
+  LASTNAME_REQUIRED: "Please provide your lastname",
   EMAIL_REQUIRED: "Please provide your email",
   PASSWORD_REQUIRED: "Please provide a password",
 };

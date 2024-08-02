@@ -4,9 +4,13 @@ import { AUTH_MESSAGES } from "../constants/messages.js";
 
 const userSchema = new mongoose.Schema(
   {
-    name: {
+    firstname: {
       type: String,
-      required: [true, AUTH_MESSAGES.NAME_REQUIRED],
+      required: [true, AUTH_MESSAGES.FIRSTNAME_REQUIRED],
+    },
+    lastname: {
+      type: String,
+      required: [true, AUTH_MESSAGES.LASTNAME_REQUIRED],
     },
     email: {
       type: String,

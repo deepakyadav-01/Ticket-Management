@@ -49,7 +49,7 @@ export const getTickets = async (query) => {
     .sort(sortOption)
     .skip(skip)
     .limit(Number(limit))
-    .populate("createdBy", "name email");
+    .populate("createdBy", "firstname lastname email");
 
   // Count total documents matching the filter criteria
   const total = await Ticket.countDocuments(filterOption);
@@ -71,7 +71,7 @@ export const getTickets = async (query) => {
  * @throws {AppError} - Throws a 404 error if the ticket is not found.
  */
 export const getTicket = async (id) => {
-  const ticket = await Ticket.findById(id).populate("createdBy", "name email");
+  const ticket = await Ticket.findById(id).populate("createdBy", "firstname lastname email");
 
   if (!ticket) {
     throw new AppError(TICKET_MESSAGES.TICKET_NOT_FOUND, 404);

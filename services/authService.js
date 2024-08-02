@@ -18,7 +18,7 @@ export const register = async (userData) => {
   await user.save();
 
   // Return user details excluding sensitive information
-  return { name: user.name, email: user.email };
+  return { firstname: user.firstname, lastname: user.lastname, email: user.email };
 };
 
 /**
@@ -50,5 +50,5 @@ export const login = async ({ email, password }) => {
   const token = generateToken({ userId: user._id });
 
   // Return the token and user details excluding sensitive information
-  return { token, user: { name: user.name, email: user.email } };
+  return { token, user: { firstname: user.firstname, lastname: user.lastname, email: user.email } };
 };
